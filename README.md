@@ -12,7 +12,7 @@ I maybe publish this dataset belongs to the condition.
 I whish this project and the dataset will help more reasearchers in Chinese Audio Processing and NLP.  
   
 ## Programs  
-There are 2 C++ programs, 1 Python script, 4 batchfiles, 1 file searching program.  
+There are 2 C++ programs, 1 Python script, 3 batchfiles, 1 file searching program.  
 1. 2 C++ programs  
 	* BuildCMD_AnalyzeSRT.exe  
 		  
@@ -24,7 +24,7 @@ There are 2 C++ programs, 1 Python script, 4 batchfiles, 1 file searching progra
 	* asstosrt
 		  
   
-3. 4 batchfiles  
+3. 3 batchfiles  
 	* 0.Execute_TXT_CMD.bat  
 	* 1.Separator_xxx_WAV.bat  
 	* 2.ReplaceFileName.bat  
