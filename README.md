@@ -15,7 +15,7 @@ I whish this project and the dataset will help more reasearchers in Chinese Audi
 There are 2 C++ programs, 1 Python script, 3 batchfiles, 1 file searching program.
 1. 2 C++ programs
 	* BuildCMD_AnalyzeSRT.exe
-		This program will set up a txt file: AnalyzeSRT_CMD.txt
+		This program will set up a txt file: `AnalyzeSRT_CMD.txt`
 		This txt file includes several commands like this:
 		`AnalyzeSRT.exe "01.mp4.wav" "01.srt"`
 		The txt file will be read by 0.Execute_TXT_CMD.bat and execute all the commands.
@@ -47,7 +47,7 @@ There are 2 C++ programs, 1 Python script, 3 batchfiles, 1 file searching progra
 			We can refer to this to clear up dataset finally.
 		* Main
 			This batch will delete a character in a file name, like:
-			`我要吃饭!.wav* -> *我要吃饭.wav`
+			`我要吃饭!.wav -> 我要吃饭.wav`
 
 4. 1 file searching program
 	* Everything
@@ -63,12 +63,33 @@ There are 2 C++ programs, 1 Python script, 3 batchfiles, 1 file searching progra
 2. Analyze subtitles
 	Please let subtitle name is as same as video name.
 	For example, if your video name is `01.mp4`, you will get `01.mp4.wav` in last step, and you should let your subtitle name is `01.srt`.
-	If your source subtitles' format is ass, please use [asstosrt](https://github.com/sorz/asstosrt) to convert ass to *.srt.
+	If your source subtitles' format is *.ass, please use [asstosrt](https://github.com/sorz/asstosrt) to convert *.ass to *.srt.
 
 3. Cut audio files
 	**NOTICE: Please follow the steps strictly!**
-	1. BuildCMD_AnalyzeSRT
-		Please set all audio files and `BuildCMD_AnalyzeSRT.exe` into the same folders.
+	1. Run `BuildCMD_AnalyzeSRT.exe`
+		Please JUST set all audio files and `BuildCMD_AnalyzeSRT.exe` into a folder.
 		Run `BuildCMD_AnalyzeSRT.exe`.
-		You will get several txt
+		You will get a txt file: `AnalyzeSRT_CMD.txt`
+		This file includes several CMD commands like:
+		`AnalyzeSRT.exe "01.mp4.wav" "01.srt"`
+		**NOTICE: Please open the txt file and check the content. Must DELETE the lines that are not similar with the EXAMPLE!**
+
+	2. Run `AnalyzeSRT.exe`
+		Please JUST set all audio files, all srt files, `AnalyzeSRT.exe`, `AnalyzeSRT_CMD.txt`, `0.Execute_TXT_CMD.bat` into a folder.
+		Run `0.Execute_TXT_CMD.bat`.
+		You will get several txt files like: `xx.txt`.
+		For example, a audio file name is `01.mp4.wav`, you will get `01.txt` correspondingly.
+
+	3. Cut audio files
+		Please JUST set all audio files, all txt files created in last step, `0.Execute_TXT_CMD.bat` into a folder.
+		CREATE a empty folder `output` in this folder.
+		Run `0.Execute_TXT_CMD.bat`.
+		You will get the outputs in `output` folder.
+		This is the dataset.
+
 4. Clear up dataset
+	There are a lot of illegal audio files(including illegal characters, 0KB files, etc.).
+	Please use `SpecialCharaList.txt` and `ReplaceFileName.bat` to rename illegal filenames.
+	I recommend that you should search illegal characters with [Everything](http://www.voidtools.com/) to insure the legality.
+
