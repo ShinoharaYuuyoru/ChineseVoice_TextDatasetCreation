@@ -17,7 +17,7 @@ There are 2 C++ programs, 1 Python script, 3 batchfiles, 1 file searching progra
 	* BuildCMD_AnalyzeSRT.exe  
 		This program will set up a txt file: AnalyzeSRT_CMD.txt  
 		This txt file includes several commands like this:  
-			*AnalyzeSRT.exe "01.mp4.wav" "01.srt"*  
+		`AnalyzeSRT.exe "01.mp4.wav" "01.srt"`  
 		The txt file will be read by 0.Execute_TXT_CMD.bat and execute all the commands.  
 	* AnalyzeSRT.exe  
 		* srtparser.h  
