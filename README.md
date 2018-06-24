@@ -67,7 +67,7 @@ There are 2 C++ programs, 1 Python script, 3 batchfiles, 1 file searching progra
   
 3. Cut audio files  
 	**NOTICE: Please follow the steps STRICTLY!**  
-	1. Run `BuildCMD_AnalyzeSRT.exe`  
+	1. Build AnalyzeSRT Commands txt file  
 		Please JUST set [all audio files] and `BuildCMD_AnalyzeSRT.exe` into a folder.  
 		Run `BuildCMD_AnalyzeSRT.exe`.  
 		You will get a txt file: `AnalyzeSRT_CMD.txt`  
@@ -75,13 +75,13 @@ There are 2 C++ programs, 1 Python script, 3 batchfiles, 1 file searching progra
 		`AnalyzeSRT.exe "01.mp4.wav" "01.srt"`  
 		**NOTICE: Please OPEN `AnalyzeSRT_CMD.txt` file and CHECK the content. MUST DELETE the lines that are not similar with the EXAMPLE!**  
   
-	2. Run `AnalyzeSRT.exe`  
+	2. Run the commands created in last step  
 		Please JUST set [all audio files], [all srt files], `AnalyzeSRT.exe`, `AnalyzeSRT_CMD.txt`, `0.Execute_TXT_CMD.bat` into a folder.  
 		Run `0.Execute_TXT_CMD.bat`.  
 		You will get several txt files like: `xx.txt`.  
 		For example, a audio file name is `01.mp4.wav`, you will get `01.txt` correspondingly.  
   
-	3. Cut audio files  
+	3. Cut audio files by run all commands in all txt files  
 		Please JUST set [all audio files], [all txt files created in last step], `0.Execute_TXT_CMD.bat` into a folder.  
 		CREATE a empty folder `output` in this folder.  
 		Run `0.Execute_TXT_CMD.bat`.  
